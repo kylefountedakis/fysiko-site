@@ -1,6 +1,6 @@
 // Demo Google Drive Links Configuration
 const demoLinks = {
-    repository: 'https://drive.google.com/drive/folders/DEMO-REPOSITORY-ID',
+    repository: 'https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdUwzTFhBVzlMZ2dwaWVFTmN5cE1EV25EbnVSP2U9V3lKQ1ZI&id=20B8F416702DF7E2%214903&cid=20B8F416702DF7E2',
     courseMaterials: 'https://drive.google.com/drive/folders/DEMO-COURSES-ID',
     assocDocs: 'https://drive.google.com/drive/folders/DEMO-ASSOCIATION-ID'
 };
