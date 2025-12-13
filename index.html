@@ -30,7 +30,17 @@
                         <li><a href="#activities">Δραστηριότητες</a></li>
                     </ul>
                 </li>
-                <li><a href="#courses" class="nav-link">Μαθήματα</a></li>
+                <li class="nav-dropdown">
+                    <a href="#courses" class="nav-link">Μαθήματα</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#prwto-etos">Πρώτος Έτος</a></li>
+                        <li><a href="#deytero-etos">Δεύτερο Έτος</a></li>
+                        <li><a href="#trito-etos">Τρίτο Έτος</a></li>
+                        <li><a href="#ep-kormou-eisagoges">Επ. Κορμού / Εισαγωγής</a></li>
+                        <li><a href="#kateythinsis">Κατεύθυνσης</a></li>
+                        <li><a href="#eleytheris">Ελεύθερης Επιλογής</a></li>
+                    </ul>
+                </li>
                 <li><a href="#assoc" class="nav-link">Σύλλογοι</a></li>
                 <li><a href="#contact" class="nav-link">Επικοινωνία</a></li>
                 <li>
@@ -233,37 +243,44 @@
             <h1>Μαθήματα</h1>
             
             <div class="content-section">
-                <p>Εδώ μπορείτε να βρείτε υλικό για τα μαθήματα του τμήματος. Το υλικό είναι οργανωμένο ανά έτος σπουδών και κατηγορία.</p>
+                <p>Όλα τα προσφερόμενα μαθήματα του προπτυχιακού κύκλου σπουδών βρίσκονται συγκεντρωμένα στη σελίδα αυτή. Πέρα από τους κωδικούς και το εξάμηνο στο οποίο προσφέρονται, μαζί με πληροφορίες για τους διδάσκοντες, κάθε μάθημα έχει έναν φάκελο στο OneDrive, στον οποίο υπάρχουν συγκεντρωμένες σημειώσεις, συγγράμματα, συμβουλές, κτλ. από φοιτητές. Για να δείτε τα μαθήματα ανά έτος / κατηγορία, μπορείτε να χρησιμοποιήσετε το dropdown menu «Μαθήματα», ή να επιλέξετε από την ακόλουθη λίστα.</p>
                 
-                <div class="notice">
-                    <h3>📂 Πρόσβαση στο Υλικό</h3>
-                    <p>Όλο το υλικό των μαθημάτων είναι διαθέσιμο στο Google Drive. Κάθε μάθημα έχει τον δικό του φάκελο με σημειώσεις, ασκήσεις και άλλο βοηθητικό υλικό.</p>
-                    <a href="#" class="btn btn-primary" id="courseMaterialsLink">Πρόσβαση στα Μαθήματα</a>
+                <div class="info-grid">
+                    <a href="#prwto-etos" class="info-card-link">
+                        <div class="card large">
+                            <h2>Πρώτο Έτος</h2>
+                        </div>
+                    </a>
+                    <a href="#deytero-etos" class="info-card-link">
+                        <div class="card large">
+                            <h2>Δεύτερο Έτος</h2>                            
+                        </div>
+                    </a>
+                    <a href="#trito-etos" class="info-card-link">
+                        <div class="card large">
+                            <h2>Τρίτο Έτος</h2>                        
+                        </div>
+                    </a>
+                    <a href="#ep-kormou-eisagoges" class="info-card-link">
+                        <div class="card large">
+                            <h2>Επ. Κορμού / Εισαγωγής</h2>
+                        </div>
+                    </a>
+                    <a href="#kateythinsis" class="info-card-link">
+                        <div class="card large">
+                            <h2>Κατεύθυνσης</h2>
+                        </div>
+                    </a> 
+                    <a href="#eleytheris" class="info-card-link">
+                        <div class="card large">
+                            <h2>Ελεύθερης Επιλογής</h2>
+                        </div>
+                    </a>             
                 </div>
-                
-                <h2>Οργάνωση Μαθημάτων</h2>
-                <div class="info-cards">
-                    <div class="card">
-                        <h3>1ο Έτος</h3>
-                        <p>Βασικά μαθήματα: Μηχανική, Μαθηματικά, Εργαστήρια</p>
-                    </div>
-                    <div class="card">
-                        <h3>2ο Έτος</h3>
-                        <p>Ηλεκτρομαγνητισμός, Θερμοδυναμική, Κύματα</p>
-                    </div>
-                    <div class="card">
-                        <h3>3ο Έτος</h3>
-                        <p>Κβαντομηχανική, Στατιστική Φυσική, Ειδικά Θέματα</p>
-                    </div>
-                    <div class="card">
-                        <h3>4ο Έτος</h3>
-                        <p>Εξειδικευμένα μαθήματα και Πτυχιακή</p>
-                    </div>
-                </div>
-                
+
                 <div class="content-section">
                     <h3>Συνεισφορά Υλικού</h3>
-                    <p>Για να συνεισφέρετε υλικό, παρακαλούμε επισκεφθείτε τη σελίδα <a href="#contact">Επικοινωνία</a> ή την <a href="#thesis">Πτυχιακή</a> για περισσότερες πληροφορίες.</p>
+                    <p>Χωρίς εσάς το υλικό αυτό δε θα μπορούσε να είναι διαθέσιμο για όλους, επομένως να θυμάστε πως εάν έχετε βοηθηθεί σε κάποιο μάθημα, μπορείτε να συνεισφέρετε και να βοηθήσετε σε κάποιο άλλο. Για να συνεισφέρετε υλικό, παρακαλούμε επισκεφθείτε τη σελίδα <a href="#contact">Επικοινωνία</a> για περισσότερες πληροφορίες.</p>
                 </div>
             </div>
         </div>
