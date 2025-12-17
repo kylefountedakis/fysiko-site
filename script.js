@@ -66,8 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Setup demo Google Drive links
-    setupDemoLinks();
+    
 
     // Contact form handling
     setupContactForm();
@@ -75,8 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Dark mode functionality
     initDarkMode();
 
-    // Show demo notification on first load
-    showDemoNotification();
+    
 });
 
 // Setup demo Google Drive links
