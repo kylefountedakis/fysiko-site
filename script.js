@@ -330,9 +330,43 @@ function initDarkMode() {
         });
     }
     
-    function updateThemeIcon(theme) {
-        if (themeIcon) {
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        }
+  function updateThemeIcon(theme) {
+    // CSS handles the icon via data-theme attribute
+    // No need to set text content anymore
+    if (themeIcon) {
+        // Optionally, you can add an accessibility attribute
+        themeIcon.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     }
 }
+}
+
+
+// Mobile nested dropdown support
+const dropdownLinks = document.querySelectorAll('.dropdown-link');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+            
+            // Close other nested dropdowns
+            dropdownLinks.forEach(otherLink => {
+                if (otherLink !== this) {
+                    otherLink.parentElement.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Close nested dropdowns when clicking elsewhere on mobile
+document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+        if (!e.target.closest('.nav-dropdown-sub')) {
+            document.querySelectorAll('.nav-dropdown-sub').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    }
+});
