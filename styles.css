@@ -627,3 +627,199 @@ a {
 a:hover {
     color: var(--primary-dark);
 }
+
+/* Add this at the END of your styles.css file */
+
+/* Font Awesome theme toggle icons */
+.theme-icon {
+    font-size: 1.3rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] .theme-icon::before {
+    content: "\f186"; /* Moon icon for light mode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .theme-icon::before {
+    content: "\f185"; /* Sun icon for dark mode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--text-dark);
+}
+
+/* Optional: Add hover effect */
+.theme-toggle:hover .theme-icon::before {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Fix for home page gap */
+#home.page {
+    min-height: auto !important; 
+    padding-top: 0 !important; 
+    padding-bottom: 2rem; 
+}
+
+.hero {
+    margin-top: 0; 
+    padding-top: 1rem; 
+}
+
+.page:not(#home) {
+    min-height: calc(100vh - 170px) }
+
+
+.hero .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.hero {
+    padding-bottom: 2rem !important;
+}
+
+.hero .container {
+    padding-bottom: 1.5rem !important;
+}
+
+.hero-buttons {
+    margin-bottom: 0;
+}
+
+
+/* NESTED DROPDOWN MENU*/
+
+/* Style for dropdown items with submenus */
+.nav-dropdown-sub {
+    position: relative;
+}
+
+/* Arrow indicator for submenu */
+.dropdown-link .arrow {
+    margin-left: 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown-sub:hover .arrow {
+    transform: rotate(90deg);
+}
+
+/* Submenu styling */
+.dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%; /* Position to the right of parent */
+    top: 0;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    min-width: 220px;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin-left: 5px;
+    z-index: 1001;
+}
+
+/* Show submenu on hover */
+.nav-dropdown-sub:hover .dropdown-submenu {
+    display: block;
+    animation: slideInRight 0.2s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Submenu items */
+.dropdown-submenu li {
+    padding: 0;
+}
+
+.dropdown-submenu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    white-space: nowrap;
+}
+
+.dropdown-submenu a:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    padding-left: 1.8rem;
+}
+
+/* Ensure main dropdown stays open when hovering submenu */
+.nav-dropdown-sub:hover > a {
+    background: var(--bg-light);
+    color: var(--primary-color);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .dropdown-submenu {
+        position: static;
+        left: auto;
+        top: auto;
+        margin: 0.5rem 0 0.5rem 1.5rem;
+        box-shadow: none;
+        background: var(--bg-light);
+        display: none;
+    }
+    
+    .nav-dropdown-sub.active .dropdown-submenu {
+        display: block;
+    }
+    
+    .dropdown-link .arrow {
+        float: right;
+        transform: rotate(0);
+    }
+    
+    .nav-dropdown-sub.active .arrow {
+        transform: rotate(90deg);
+    }
+}
